@@ -1,0 +1,234 @@
+$colors: (
+    primary: #005DFF,
+    primary-light: lighten(#005DFF, 40%),
+    primary-dark: darken(#005DFF, 40%),
+    accent: #fff6BB,
+);
+$headerImage: "../images/mobile_mark-basarab-122141-unsplash.jpg";
+$main_corner_svg: "../images/angle.svg";
+$mainLink1Image: "../images/photo-1534759846116-5799c33ce22a.jpeg";
+$mainLink2Image: "../images/eberhard-grossgasteiger-382452-unsplash.jpg";
+$mainLink3Image: "../images/casey-horner-487085-unsplash.jpg";
+$nav_menu_svg: "../images/menu.svg";
+$nav_accounts_svg: "../images/accounts.svg";
+$nav_logo_svg: "../images/logo.svg";
+
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+};
+* {
+    padding: 0;
+    margin: 0%;
+    color: #fff;
+    z-index: 999;
+}
+
+body {
+    font-family: Roboto;
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+nav {
+    background-color: #fff;
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 5px 10px 5px 10px;
+        .left, .right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .left li, .right li {
+            
+            width: 30px;
+            height: 40px;
+        }
+        .left{
+            li{
+                display: inline-block;
+            }  
+            li#logo {
+                background: url($nav_logo_svg);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 35px;
+                width: 35px;
+            }
+        }
+        .right {
+            justify-content: flex-end;
+            li{
+                display: flex;
+                justify-content: flex-end;
+                margin-left: 10px;
+            }  
+            li#menu {
+                background: url($nav_menu_svg);
+                background-position: center;
+                background-size: 80%;
+                background-repeat: no-repeat;
+            }
+            li#accounts {
+                background: url($nav_accounts_svg);
+                background-position: center;
+                background-size: 80%;
+                background-repeat: no-repeat;
+
+            }
+        }
+        
+    }
+}
+
+header{
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    background-image: url($headerImage);
+    background-position: 50% 0%;
+    background-attachment: fixed;
+    .gradient{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+        position: relative;
+        width: 100%;
+        height: 30%;
+        flex:1;
+        z-index: 1;
+    }
+    h1{
+        color: #fff;
+        text-align: right;
+        font-size: calc(12px + 10vw);
+        padding: 5px 10px 5px 10px;
+        margin: 25% 0 25% 0 ;
+    }
+    p {
+        text-align: left;
+        padding: 5px 10px 5px 10px;
+        font-size: calc(12px + 1.5vw);
+        width: 80%;        
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-top: -10px;
+    background: #000;
+
+    a:first-child {
+        text-decoration: none;
+        padding: 10px;
+        height: 430px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        h2 {
+            text-decoration: none;
+            font-family: Roboto;
+            width: 100%;
+        }
+        p {
+            align-self: flex-end;
+            font-size: 1.5em;
+            
+        }
+        h2, p {
+            margin: 30px 0;
+        }
+    }
+    a:first-child h1, a:first-child p {
+        margin: 0 0;
+    }
+    a#mainLink2, a#mainLink3 {
+        text-decoration: none;
+        padding-bottom: 0;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        caption {
+            background-color: white;
+            text-decoration: none;
+            text-align: left;
+            font-family: Roboto;
+            width: auto;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            h3{
+                text-decoration: none;
+                color: rgb(105, 105, 105);
+                font-size: 1em;
+            }
+            p{
+                color: #000;
+                font-size: 1.5em;
+            }
+        }
+        .play{
+            width: 100%;
+            height: 100%;
+            .circle {
+                width: 70px;
+                height: 70px;
+                position: relative;
+                left:50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.664);
+                .triangle{
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    left:50%;
+                    top: 50%;
+                    transform: translate(-30%, -50%);
+                    background-color: #FF7500;
+                    clip-path: polygon(80% 50%, 0 0, 0 100%);
+                }
+            }
+            }
+        }
+
+    #corner {
+        background-image: url($main_corner_svg);
+        align-self: flex-start;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        margin-left: 0;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    a#mainLink1 {
+     background-image: url($mainLink1Image);
+    }
+    a#mainLink2 {
+        background-image: url($mainLink2Image);
+       }
+    a#mainLink3 {
+    background-image: url($mainLink3Image);
+    }
+}

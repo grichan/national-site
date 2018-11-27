@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0%;
+  color: #fff;
+  z-index: 999;
+}
+
+body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+nav {
+  background-color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+}
+
+nav ul .left, nav ul .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul .left li, nav ul .right li {
+  width: 30px;
+  height: 40px;
+}
+
+nav ul .left li {
+  display: inline-block;
+}
+
+nav ul .left li#logo {
+  background: url("../images/logo.svg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 35px;
+  width: 35px;
+}
+
+nav ul .right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav ul .right li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 10px;
+}
+
+nav ul .right li#menu {
+  background: url("../images/menu.svg");
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+nav ul .right li#accounts {
+  background: url("../images/accounts.svg");
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 100%;
+  height: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../images/mobile_mark-basarab-122141-unsplash.jpg");
+  background-position: 50% 0%;
+  background-attachment: fixed;
+}
+
+header .gradient {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  position: relative;
+  width: 100%;
+  height: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: 1;
+}
+
+header h1 {
+  color: #fff;
+  text-align: right;
+  font-size: calc(12px + 10vw);
+  padding: 5px 10px 5px 10px;
+  margin: 25% 0 25% 0;
+}
+
+header p {
+  text-align: left;
+  padding: 5px 10px 5px 10px;
+  font-size: calc(12px + 1.5vw);
+  width: 80%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 10px;
+  margin-top: -10px;
+  background: #000;
+}
+
+main a:first-child {
+  text-decoration: none;
+  padding: 10px;
+  height: 430px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+main a:first-child h2 {
+  text-decoration: none;
+  font-family: Roboto;
+  width: 100%;
+}
+
+main a:first-child p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 1.5em;
+}
+
+main a:first-child h2, main a:first-child p {
+  margin: 30px 0;
+}
+
+main a:first-child h1, main a:first-child p {
+  margin: 0 0;
+}
+
+main a#mainLink2, main a#mainLink3 {
+  text-decoration: none;
+  padding-bottom: 0;
+  height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main a#mainLink2 caption, main a#mainLink3 caption {
+  background-color: white;
+  text-decoration: none;
+  text-align: left;
+  font-family: Roboto;
+  width: auto;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+main a#mainLink2 caption h3, main a#mainLink3 caption h3 {
+  text-decoration: none;
+  color: dimgray;
+  font-size: 1em;
+}
+
+main a#mainLink2 caption p, main a#mainLink3 caption p {
+  color: #000;
+  font-size: 1.5em;
+}
+
+main a#mainLink2 .play, main a#mainLink3 .play {
+  width: 100%;
+  height: 100%;
+}
+
+main a#mainLink2 .play .circle, main a#mainLink3 .play .circle {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.664);
+}
+
+main a#mainLink2 .play .circle .triangle, main a#mainLink3 .play .circle .triangle {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+  background-color: #FF7500;
+  -webkit-clip-path: polygon(80% 50%, 0 0, 0 100%);
+          clip-path: polygon(80% 50%, 0 0, 0 100%);
+}
+
+main #corner {
+  background-image: url("../images/angle.svg");
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  margin-left: 0;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+main a#mainLink1 {
+  background-image: url("../images/photo-1534759846116-5799c33ce22a.jpeg");
+}
+
+main a#mainLink2 {
+  background-image: url("../images/eberhard-grossgasteiger-382452-unsplash.jpg");
+}
+
+main a#mainLink3 {
+  background-image: url("../images/casey-horner-487085-unsplash.jpg");
+}
+/*# sourceMappingURL=main.css.map */
